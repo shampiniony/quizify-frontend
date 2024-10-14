@@ -3,19 +3,19 @@
 .container {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto 30px; /* Центрирование контейнера по горизонтали */
+  margin: 0 auto 30px;
   display: flex;
-  justify-content: center; /* Центрируем содержимое */
+  justify-content: center;
   align-items: center;
 }
 
 .formWrapper {
   display: flex !important;
-  flex-direction: column; /*Размещаем форму и статус по вертикали*/
-  align-items: center; /* Центрируем все содержимое по горизонтали */
+  flex-direction: column;
+  align-items: center;
 }
 
-.emailForm {
+.emailForm {  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +26,7 @@
 .input {
   width: 200px;
   padding: 10px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #000;
   border-radius: 10px;
   box-shadow: 3px 3px 0px black;
   font-size: 14px;
@@ -49,10 +49,16 @@
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 3px 3px 0px black;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
+.button:hover {
+  background-color: #b4a4f0;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
 .button:disabled {
   background-color: #e1e1e1;
   cursor: not-allowed;
@@ -62,15 +68,22 @@
   background-color: #b4a4f0;
 }
 
-/* Стили для статуса (успех или ошибка) */
 .status {
   font-size: 14px;
-  color: #d9534f; /* Красный цвет для ошибок */
+  color: #d9534f;
   margin-top: 10px;
   text-align: center;
 }
 
-/* Если нужно, можно добавить разные цвета для успеха и ошибки */
+/* Стили для успеха и ошибки */
 .status.success {
-  color: #5cb85c; /* Зеленый цвет для успеха */
+  color: #5cb85c;
+}
+
+/* Стили для успеха */
+.successMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }

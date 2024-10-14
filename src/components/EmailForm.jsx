@@ -1,59 +1,80 @@
 import React, { useState } from "react";
-import styles from "./EmailForm.module.css"; // Импорт модульных стилей
+import { Form, Button, Alert } from "react-bootstrap";
+import styles from "./EmailForm.module.css";
 
 const EmailForm = () => {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState(""); // Для отображения статуса
-  const [loading, setLoading] = useState(false); // Для индикации загрузки
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Функция для обработки отправки формы
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Начинаем индикацию загрузки
-    setStatus(""); // Сброс статуса перед новой попыткой
+    setLoading(true);
+    setStatus("");
 
     try {
-      const response = await fetch("https://example.com/api/send-email", {
+      const params = new URLSearchParams();
+      params.append("email", email);
+
+      const response = await fetch("https://api.kvizik.ru/save-email", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify({ email }), // Отправляем email в теле запроса
+        body: params.toString(),
       });
 
       if (response.ok) {
-        // Если запрос успешен
         setStatus("Email успешно отправлен!");
+        setIsSubmitted(true);
       } else {
-        // Если сервер вернул ошибку
         setStatus("Произошла ошибка при отправке. Попробуйте позже.");
       }
     } catch (error) {
-      // Обработка исключений (например, проблема с сетью)
       setStatus("Ошибка соединения. Проверьте ваше интернет-соединение.");
     } finally {
-      setLoading(false); // Останавливаем индикацию загрузки
+      setLoading(false);
     }
   };
 
   return (
     <div className={styles.container}>
       <div className="formWrapper">
-        <form onSubmit={handleSubmit} className={styles.emailForm}>
-          <input
-            type="email"
-            placeholder="pupupupupupu@pupu"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className={styles.input}
-            required
-          />
-          <button type="submit" className={styles.button} disabled={loading}>
-            {loading ? "Отправка..." : "Отправить"}
-          </button>
-          {status && <p className={styles.status}>{status}</p>}{" "}
-          {/* Вывод статуса */}
-        </form>
+        {isSubmitted ? (
+          <div className={styles.successMessage}>
+            <Alert variant="success">Ваша заявка на ранний доступ принята!</Alert>
+            <Button
+              href="https://t.me/kvizikru"
+              target="_blank"
+              className={styles.button}
+              style={{ marginTop: "10px" }}
+            >
+              Перейти в Telegram
+            </Button>
+          </div>
+        ) : (
+          <Form onSubmit={handleSubmit} className={styles.emailForm}>
+            <Form.Group controlId="formEmail">
+              <Form.Control
+                type="email"
+                placeholder="i.ivanov@mail.ru"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={styles.input}
+                required
+              />
+            </Form.Group>
+            <Button type="submit" className={styles.button} disabled={loading}>
+              {loading ? "Отправка..." : "Отправить"}
+            </Button>
+            {status && (
+              <Alert variant={status.includes("успешно") ? "success" : "danger"} className={styles.status}>
+                {status}
+              </Alert>
+            )}
+          </Form>
+        )}
       </div>
     </div>
   );

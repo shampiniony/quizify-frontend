@@ -6,6 +6,7 @@ import EmailForm from "./components/EmailForm";
 import HowItWorks from "./components/HowItWorks";
 import ForWhom from "./components/ForWhom";
 import Footer from "./components/Footer";
+import { Button } from 'react-bootstrap';
 
 function App() {
   return (
