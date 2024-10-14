@@ -1,11 +1,11 @@
 .main_cont {
-  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .row_cont {
@@ -62,8 +62,8 @@
 }
 
 .text {
-  width: 355px;
-  height: 135px;
+  /* width: 355px; */
+  /* height: 135px; */
   padding: 40px;
   line-height: 150%;
   font-size: 18px;
@@ -71,7 +71,40 @@
 }
 
 @media (max-width: 900px) {
+  .main_cont {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+  .block {
+    width: 100%;
+  }
   .row_cont {
     flex-direction: column;
+  }
+
+  .header {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 700px) {
+  .text {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 500px) {
+  .text {
+    font-size: 16px;
   }
 }

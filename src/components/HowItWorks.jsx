@@ -29,7 +29,7 @@ const HowItWorks = () => {
         <div className={classes.block}>
           <div className={classes.container}>
             <div className={classes.headerYellow}>
-              <p>Заметки</p>
+              <p className={classes.header}> Заметки</p>
             </div>
             <div className={classes.card}>
               <p className={classes.text}>
