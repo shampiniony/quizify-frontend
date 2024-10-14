@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+# Вопросы в ходе вёрстки
+
+1. Добавил шрифт Inter через google fonts как ссылку в index.html. При обычной вёрстке я читал, что так норм, но при вёрстке в реакт читал про то, что нужен отдельный файл
+   fonts. Оставил так, потому что здесь один шрифт на весь лендинг. Надо ли переделать? Если да, то как это лучше сделать?
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

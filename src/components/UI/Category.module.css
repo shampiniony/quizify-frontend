@@ -1,0 +1,69 @@
+.card_container {
+  display: flex;
+  align-items: center; /* Центрирование элементов по вертикали */
+
+  justify-content: center;
+  /* width: 100%; */
+
+  padding-bottom: 40px;
+  height: 80px;
+  margin: 0 330px; /* Центрирование карточки на странице */
+}
+
+.image_container {
+  width: 80px;
+  height: 80px;
+
+  box-shadow: 5px 5px 0 black;
+  border-radius: 10px;
+  flex: 0 0 auto; /* Фиксированный размер для изображения */
+  display: flex;
+  align-items: center; /* Центрирование изображения по вертикали */
+  justify-content: center;
+}
+
+.image_container img {
+  width: 60px; /* Ширина изображения */
+  height: 60px; /* Высота изображения */
+}
+
+.text_container {
+  flex-grow: 1; /* Занимает оставшееся пространство */
+  display: flex;
+  flex-direction: column;
+  justify-content: left; /* Вертикальное распределение */
+  margin-left: 20px;
+}
+
+.text_container h2 {
+  margin: 0 0 10px; /* Отступ для заголовка */
+  font-weight: 500;
+  font-size: 1.5em;
+  color: black;
+}
+
+.text_container p {
+  margin: 0;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .card_container {
+    flex-direction: column; /* На маленьких экранах блоки располагаются вертикально */
+    text-align: center;
+  }
+
+  .image_container {
+    padding-right: 0;
+    margin-bottom: 10px; /* Отступ между изображением и текстом */
+  }
+
+  .text_container h2 {
+    font-size: 1.2em;
+  }
+
+  .text_container p {
+    font-size: 0.9em;
+  }
+}
