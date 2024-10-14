@@ -23,8 +23,9 @@
 }
 
 .image_container img {
-  width: 60px; /* Ширина изображения */
-  height: 60px; /* Высота изображения */
+  /* width: 60px;
+  height: 60px; */
+  width: 80%;
 }
 
 .text_container {
@@ -50,20 +51,26 @@
 
 @media (max-width: 768px) {
   .card_container {
-    flex-direction: column; /* На маленьких экранах блоки располагаются вертикально */
+    /* flex-direction: column; На маленьких экранах блоки располагаются вертикально */
+    width: 90%;
     text-align: center;
+    justify-content: left;
+    margin: 0 auto;
+    text-align: left;
   }
 
   .image_container {
     padding-right: 0;
     margin-bottom: 10px; /* Отступ между изображением и текстом */
   }
-
+  .text_container {
+    width: 100%;
+  }
   .text_container h2 {
     font-size: 1.2em;
   }
 
   .text_container p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 }
