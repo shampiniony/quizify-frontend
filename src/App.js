@@ -5,6 +5,7 @@ import Body from "./components/MainBody";
 import EmailForm from "./components/EmailForm";
 import HowItWorks from "./components/HowItWorks";
 import ForWhom from "./components/ForWhom";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <EmailForm />
       <HowItWorks />
       <ForWhom />
+      <Footer />
     </div>
   );
 }

@@ -8,14 +8,14 @@ const Header = () => {
     setIsOpen(!IsOpen);
   };
   return (
-    <header className={classes.header}>
+    <header className={classes.header} id="Head">
       <div className={classes.logo}>
         <img src="/images/Logo.svg" alt="Logo" />
         <span>Kvizik</span>
       </div>
       <nav className={`${classes.navLinks} ${IsOpen ? "open" : ""}`}>
-        <a href="#">Как работает</a>
-        <a href="#">Для кого</a>
+        <a href="#HowWorks">Как работает</a>
+        <a href="#ForWhom">Для кого</a>
       </nav>
       <div
         className={`${classes.burger} ${IsOpen ? "open" : ""}`}

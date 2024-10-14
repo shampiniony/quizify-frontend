@@ -6,7 +6,7 @@ import Category from "./Category";
 const ForWhom = () => {
   return (
     <div className={classes.main_cont}>
-      <h1>Для кого</h1>
+      <h1 id="ForWhom">Для кого</h1>
       <TwoLinesHeading as="h2">
         Предназначено для различных категорий пользователей, помогая им
         экономить <br />

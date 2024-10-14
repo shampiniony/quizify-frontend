@@ -4,7 +4,7 @@ import classes from "./UI/HowItWorks.module.css";
 const HowItWorks = () => {
   return (
     <div className={classes.main_cont}>
-      <h1>Как работает</h1>
+      <h1 id="HowWorks">Как работает</h1>
       <h2>
         Мы поможем ускорить ваше обучение и подготовку, используя наши
         инструменты
