@@ -6,11 +6,13 @@ import EmailForm from "./components/EmailForm";
 import HowItWorks from "./components/HowItWorks";
 import ForWhom from "./components/ForWhom";
 import Footer from "./components/Footer";
-import { Button } from 'react-bootstrap';
+import MetaTags from "./components/MetaTags";
+
 
 function App() {
   return (
     <div className="App">
+      <MetaTags />
       <Header />
       <Body />
       <EmailForm />
