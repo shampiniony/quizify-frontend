@@ -5,6 +5,10 @@
   max-width: 1440px;
   margin: 0 auto 30px;
   display: flex;
+
+  flex-direction: column;
+  flex-wrap: wrap;
+
   justify-content: center;
   align-items: center;
 }
@@ -73,6 +77,19 @@
   color: #d9534f;
   margin-top: 10px;
   text-align: center;
+}
+
+.subscribe_button {
+  margin: 20px auto;
+  background-color: rgba(148, 203, 255, 1);
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px black;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
 }
 
 /* Стили для успеха и ошибки */

@@ -30,7 +30,7 @@ const Footer = () => {
             className={classes.subscribe_button}
             onClick={handleButtonClick}
           >
-            Подписаться
+            Подпишитесь
           </button>
         </div>
         <div className="links">

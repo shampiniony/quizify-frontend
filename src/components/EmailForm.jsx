@@ -38,6 +38,10 @@ const EmailForm = () => {
     }
   };
 
+  const handleButtonClick = () => {
+    window.open("https://t.me/kvizikru", "_blank");
+  };
+
   return (
     <div className={styles.container}>
       <div className="formWrapper">
@@ -76,6 +80,12 @@ const EmailForm = () => {
           </Form>
         )}
       </div>
+      <button
+            className={styles.subscribe_button}
+            onClick={handleButtonClick}
+          >
+            Подпиcаться на Telegram
+          </button>
     </div>
   );
 };
