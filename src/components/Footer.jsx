@@ -7,18 +7,19 @@ const Footer = () => {
   const handleButtonClick = () => {
     window.open("https://t.me/kvizikru", "_blank");
   };
-
   return (
     <footer className={styles.footer}>
       <div className={classes.container}>
-        <div className={classes.logo}>
-          <img
-            src="images/Logo.svg"
-            alt="Kvizik Logo"
-            className={classes.logo_img}
-          />
-          <span>Kvizik</span>
-        </div>
+        <a href="#QHeader">
+          <div className={classes.logo}>
+            <img
+              src="images/Logo.svg"
+              alt="Kvizik Logo"
+              className={classes.logo_img}
+            />
+            <span>Kvizik</span>
+          </div>
+        </a>
         <div className={classes.center_content}>
           <TwoLinesHeading as="p">
             Подпишитесь на наш Telegram-канал,

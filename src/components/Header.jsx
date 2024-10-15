@@ -8,7 +8,7 @@ const Header = () => {
     setIsOpen(!IsOpen);
   };
   return (
-    <header className={classes.header} id="Head">
+    <header className={classes.header} id="QHeader">
       <div className={classes.logo}>
         <img src="/images/Logo.svg" alt="Logo" />
         <span>Kvizik</span>

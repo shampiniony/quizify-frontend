@@ -27,10 +27,12 @@ footer {
 }
 
 .center_content {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .subscribe_button {
+  margin: 0 auto;
   background-color: rgba(148, 203, 255, 1);
   color: #000;
   padding: 10px 20px;
@@ -49,6 +51,12 @@ footer {
   text-align: right;
 }
 
+a {
+  text-decoration: none; /* Убирает подчеркивание */
+  color: inherit; /* Унаследует цвет текста от родительского элемента */
+  display: block; /* Делает ссылку блочной, чтобы она охватывала весь контейнер */
+}
+
 .link {
   display: block;
   color: rgba(0, 0, 0, 0.6);
@@ -59,4 +67,41 @@ footer {
 
 .description {
   padding-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+  footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+    text-align: left;
+  }
+  .container {
+    flex-direction: column;
+
+    margin: 0;
+    justify-content: left;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .logo_img {
+    padding: 0 10px 0 0;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .center_content {
+    align-items: flex-start;
+  }
+
+  p {
+    text-align: left !important;
+  }
+  .subscribe_button {
+    margin: 0 0 20px 0;
+  }
 }
