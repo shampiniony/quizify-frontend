@@ -7,7 +7,7 @@
 
   padding-bottom: 40px;
   height: 80px;
-  margin: 0 330px; /* Центрирование карточки на странице */
+  margin: 0 20%; /* Центрирование карточки на странице */
 }
 
 .image_container {
@@ -57,9 +57,11 @@
     justify-content: left;
     margin: 0 auto;
     text-align: left;
+    padding-bottom: 20px;
   }
 
   .image_container {
+    transform: scale(80%);
     padding-right: 0;
     margin-bottom: 10px; /* Отступ между изображением и текстом */
   }

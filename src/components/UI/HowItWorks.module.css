@@ -70,7 +70,7 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .main_cont {
     width: 100%;
   }
